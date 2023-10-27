@@ -12,11 +12,10 @@ int main() {
   for (i = 0; i < n; i++)
     printf("%d\n", a[i]);
 
-for (i=0;i<n;i++)
-{
-    for(j=0;j<n;j++)
+for (i=0;i<n;i++){//not optimal(n*n)
+    for(j=i+1;j<n;j++)
     {
-        if(a[i]<a[j])
+        if(a[i]>a[j])
         {
             //swap
             temp=a[j];
